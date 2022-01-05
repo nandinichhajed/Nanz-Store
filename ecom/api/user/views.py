@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny
-from .models import CustomeUser
+from .models import CustomUser
 from .serializers import UserSerializer
 from django.http import JsonResponse
 from django.contrib.auth import get_user_model
@@ -70,7 +70,7 @@ def signout(request, id):
 class UserViewSet(viewsets.ModelViewSet):
     permission_classes_by_action  = {'create': [AllowAny]}
     
-    quaryset = CustomeUser.objects.all().order_by('id')
+    queryset = CustomUser.objects.all().order_by('id')
     serializer_class =  UserSerializer
     
     def get_permissions(self):
