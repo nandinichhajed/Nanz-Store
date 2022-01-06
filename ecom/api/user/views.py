@@ -23,7 +23,7 @@ def signin(request):
 
 # validation part
     if not re.match("^[\w\.\+\-]+\@[\w]+\.[a-z]{2,3}$", username):
-        return    JsonResponse({'error': 'enter avalid email'})
+        return JsonResponse({'error': 'enter a valid email'})
     
     if len(password) < 3:
         return JsonResponse({'error': 'passwords need to be atlist of 3 char'})
