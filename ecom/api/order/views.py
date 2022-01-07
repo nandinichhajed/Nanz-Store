@@ -43,6 +43,6 @@ def add(request, id, token):
         return JsonResponse({'success': True, 'error': False, 'msg': 'Order placed successfully'})
 
 class OrderViewSet(viewsets.ModelViewSet):
-    quaryset = Order.objects.all().order_by('id')
+    queryset = Order.objects.all().order_by('id')
     serializer_class = OrderSerializers        
     
