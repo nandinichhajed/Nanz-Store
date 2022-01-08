@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from django.contrib.auth import login_required
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
-from django.views.decorators.csrf import csrf_excempt
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 import braintree
 
@@ -26,14 +26,14 @@ def validate_user_session(id, token):
     except UserModel.DoseNotExsist:
         return False
     
-@csrf_excempt
+@csrf_exempt
 def generate_token(request, id, token):
     if not validate_user_session(id, token):
         return JsonResponse({'error': 'Invalid Session, Please login again!'})
     
     return JsonResponse({'clientToken': gateway.client_token.generate, 'success': True})
 
-@csrf_excempt
+@csrf_exempt
 def process_payement(request, id, token):
     if not validate_user_session(id, token):
         return JsonResponse({'error': 'Invalid Session, Please login again!'})
