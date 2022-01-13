@@ -18,6 +18,11 @@ git clone https://github.com/nandinichhajed/Nanz-Store.git
 ```bash
 cd Nanz-Store
 ```
+**Install virtual Environment**
+
+```bash
+pip install pipenv 
+```
 
 **Create virtual Environment**
 
@@ -26,6 +31,8 @@ pipenv shell
 ```
 
 **Activate virtual Environment**
+
+It will use the pre created pip file and if the file is not found it will create the new one
 
 ```bash
 pipenv shell
