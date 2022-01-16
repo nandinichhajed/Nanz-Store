@@ -1,6 +1,7 @@
 # Nanz-Store
 
 ## Tech Used
+- Django_REST_Framework
 - Django
 - Python
 
