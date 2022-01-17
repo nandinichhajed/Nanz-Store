@@ -10,14 +10,20 @@ import random
 import re
 # Create your views here.
 
+
 def generate_session_token(length=10):
     return ''.join(random.SystemRandom().choice([chr(i) for i in range(97, 123)] + [str(i) for i in range(10)]) for _ in range(length))
+
 
 @csrf_exempt
 def signin(request):
     if not request.method == 'POST':
         return JsonResponse({'error': 'Send a post request with valid paramenter only'})
 
+    # print(request.POST.get('email', None))  - if you will not get email, None will be printed
+    # print(request.POST.get('email', None))
+    # print(request.POST.get('password', None))
+    
     username = request.POST['email']
     password = request.POST['password']
 
