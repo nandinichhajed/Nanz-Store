@@ -1,4 +1,5 @@
 # Nanz-Store
+an E-commmerse Store
 
 ## Tech Used
 - Django_REST_Framework
