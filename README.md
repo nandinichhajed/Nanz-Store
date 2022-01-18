@@ -1,5 +1,5 @@
 # Nanz-Store
-Online shopping is a form of electronic commerce that allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app. **Nanz-Store** is an Online E-commerce Store Where users can buy clothes from different categories.
+An online shopping site allows consumers to purchase goods and services from a seller directly through their browser or a mobile application over the Internet. **Nanz-Store** is a website where users can shop and browse clothes in various categories online. This Reporisatery is pure Backend of the store with integration of Braintree payment gateway.
 
 ## Tech Used
 - Django_REST_Framework
