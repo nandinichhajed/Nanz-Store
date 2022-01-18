@@ -1,5 +1,5 @@
 # Nanz-Store
-An online shopping site allows consumers to purchase goods and services from a seller directly through their browser or a mobile application over the Internet. **Nanz-Store** is a website where users can shop and browse clothes in various categories online. This Reporisatery is pure Backend of the store with integration of Braintree payment gateway.
+An online shopping site allows consumers to purchase goods and services from a seller directly through their browser or a mobile application over the Internet. **Nanz-Store** is a website where users can shop and browse clothes in various categories online. This Repository is the pure Backend of the store with integration of the Braintree payment gateway.
 
 ## Tech Used
 - Django_REST_Framework
