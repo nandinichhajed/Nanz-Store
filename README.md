@@ -1,5 +1,5 @@
 # Nanz-Store
-An E-commmerse Store
+Online shopping is a form of electronic commerce that allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app. **Nanz-Store** is an Online E-commerce Store Where users can buy clothes from different categories.
 
 ## Tech Used
 - Django_REST_Framework
