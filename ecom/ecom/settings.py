@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # corsheaders for handling the server headers required for Cross-Origin Resource Sharing (CORS)
     'corsheaders',
     'rest_framework',
+    # rest_framework.authtoken is required so that custom signup can be created
     'rest_framework.authtoken',
     'api.apps.ApiConfig',
     'api.category',
@@ -128,6 +130,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# ading media Path
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
