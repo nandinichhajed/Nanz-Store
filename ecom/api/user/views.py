@@ -45,6 +45,7 @@ def signin(request):
         if user.check_password(password):
             usr_dict = UserModel.objects.filter(
                 email=username).values().first()
+            # we pop password here because we dont want it to travel to the frontend
             usr_dict.pop('password')
 
             if user.session_token != "0":

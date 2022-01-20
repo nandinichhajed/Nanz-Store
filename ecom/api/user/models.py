@@ -1,13 +1,19 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
+# Create model based on exsisting model.
+
+# If you’re starting a new project, it’s highly recommended to set up a custom user model, 
+# even if the default User model is sufficient for you. 
+# This model behaves identically to the default user model, 
+# but you’ll be able to customize it in the future if the need arises:
 
 class CustomUser(AbstractUser):
     name = models.CharField(max_length=50, default='Anonymous')  
-    # if no name is given we ca write default name as Anonymous
+    # if no name is given we can write default name as Anonymous
     email = models.EmailField(max_length=254, unique=True)
     
+    # we don't want to signup on the basis of user name.
     username = None
     
     USERNAME_FIELD = 'email'
@@ -18,7 +24,6 @@ class CustomUser(AbstractUser):
 
     session_token = models.CharField(max_length=10, default=0)
     # default=0 means that the user is not loggined
-    
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)    

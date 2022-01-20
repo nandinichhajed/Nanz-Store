@@ -12,6 +12,7 @@ class Migration(migrations.Migration):
         user.set_password("nandini")
         user.save()
 
+# if it is dependent on some other model then we add dependencies
     dependencies = [
 
     ]

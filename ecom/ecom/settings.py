@@ -134,6 +134,7 @@ STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# As we are writing our custom user model we need to import it to settings
 AUTH_USER_MODEL = "user.CustomUser"
 
 # Default primary key field type
