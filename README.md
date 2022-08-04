@@ -11,7 +11,6 @@ An online shopping site allows consumers to purchase goods and services from a s
 
 **Clone project**
 
-
 ```bash
 git clone https://github.com/nandinichhajed/Nanz-Store.git
 ```
