@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-# Create model based on exsisting model.
+# Create model based on existing model.
 
 # If you’re starting a new project, it’s highly recommended to set up a custom user model, 
 # even if the default User model is sufficient for you. 
@@ -23,7 +23,7 @@ class CustomUser(AbstractUser):
     gender = models.CharField(max_length=50, blank=True, null=True)    
 
     session_token = models.CharField(max_length=10, default=0)
-    # default=0 means that the user is not loggined
+    # default=0 means that the user is not login
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)    
